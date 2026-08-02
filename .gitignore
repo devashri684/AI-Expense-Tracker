@@ -1,0 +1,22 @@
+# IntelliJ IDEA
+.idea/
+**/.idea/
+*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/target/
+
+# Environment
+.env
+*.env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
