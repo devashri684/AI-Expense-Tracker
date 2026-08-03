@@ -62,9 +62,15 @@ input {
 }
 
 button {
-  border: none;
-  margin: 0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+  box-shadow: 0 12px 24px rgba(15, 118, 110, 0.22);
+  padding: 12px 16px;
+  font-weight: 700; 
+  border-radius: 14px;
+  margin-top: 18px;
 }
+
 
 .app-shell {
   min-height: 100svh;
