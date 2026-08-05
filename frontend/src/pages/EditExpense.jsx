@@ -42,13 +42,13 @@ function EditExpense() {
     <section className="page-stack">
       <div className="hero-card card">
         <div>
-          <p className="eyebrow">Expense Tracker</p>
-          <h1>Edit Expense</h1>
-          <p className="hero-copy">Update an existing expense and return to the dashboard after saving.</p>
+          <p className="eyebrow">Transaction Manager</p>
+          <h1>Edit Transaction</h1>
+          <p className="hero-copy">Update an existing record and return to the dashboard after saving.</p>
         </div>
 
         <Link className="button button-secondary" to="/">
-          Back to Dashboard
+          Back
         </Link>
       </div>
 

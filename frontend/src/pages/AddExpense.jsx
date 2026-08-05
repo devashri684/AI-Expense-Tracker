@@ -54,18 +54,28 @@ function AddExpense() {
     <section className="page-stack">
       
       {/* Header */}
-      <div className="hero-card card">
-        <div>
-          <p className="eyebrow">Expense Tracker</p>
-          <h1>Add Expense</h1>
-          <p className="hero-copy">
-            Create a new expense and return to the dashboard after saving.
-          </p>
+      <div className="hero-card card page-intro-card">
+        <div className="page-intro-copy">
+          <div className="page-icon-badge">✦</div>
+          <div>
+            <p className="eyebrow">Transaction Manager</p>
+            <h1>New Transaction</h1>
+            <p className="hero-copy">
+              Capture income or expense entries quickly and keep your balance updated in real time.
+            </p>
+          </div>
         </div>
 
         <Link className="button button-secondary" to="/">
-          Back to Dashboard
+          Back
         </Link>
+      </div>
+
+      <div className="card form-summary-card">
+        <div>
+          <p className="form-summary-title">Track every movement</p>
+          <p className="form-summary-copy">Choose a type, add a title, and save your transaction in seconds.</p>
+        </div>
       </div>
 
       {/* API Error */}
@@ -78,7 +88,7 @@ function AddExpense() {
       {/* Form */}
       <ExpenseForm
         onSubmit={handleSubmit}
-        submitLabel={loading ? 'Saving...' : 'Create Expense'}
+        submitLabel={loading ? 'Saving...' : 'Save Transaction'}
       />
     </section>
   )
