@@ -1,71 +1,61 @@
 # 💰 AI-Powered Expense Tracker
 
-A full-stack AI-powered expense management application built using **Spring Boot, React.js, and MySQL**. The application helps users track expenses, analyze spending patterns, manage budgets, and receive smart financial insights.
+# 💳 Full-Stack Expense Tracker & Analytics Dashboard
+
+A robust, production-grade full-stack personal finance and expense management platform designed to track daily transactions, calculate financial metrics, and visualize spending patterns through interactive analytics dashboards.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-* ✅ Add, update, and delete expenses
-* ✅ Category-based expense tracking
-* ✅ Monthly spending analysis
-* ✅ Dashboard with expense insights
-* ✅ Smart budget alerts
-* ✅ Automated expense analysis
-* ✅ Real-time financial summaries
-* ✅ RESTful API-based backend
-* ✅ Responsive user interface
+* **Complete CRUD Operations:** Seamlessly add, update, delete, and fetch expense records in real time.
+* **Category Tracking:** Organize expenses dynamically across various spending categories.
+* **Financial Summaries & Metrics:** Automatically computes total balances, income, expenses, and net savings.
+* **Data Visualization:** Interactive charts and breakdown views powered by React and Recharts.
+* **RESTful Architecture:** Built on a decoupled client-server model using secure, stateless backend APIs.
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ System Architecture
 
-```
-AI-Expense-Tracker
+```text
+Expense-Tracker
 │
-├── frontend
-│   └── React.js Application
+├── frontend (React.js SPA)
+│   └── Communicates via Axios & Vite Proxy
 │
-├── backend
-│   └── Spring Boot REST API
+├── backend (Spring Boot REST API)
+│   └── Managed via Spring Data JPA & Hibernate
 │
 └── MySQL Database
-```
-
----
+    └── Relational data persistence
 
 ## 🛠️ Tech Stack
 
-### Frontend
+## Frontend
+React.js (Component-based UI architecture)
 
-* React.js
-* JavaScript
-* HTML5
-* CSS3
-* Axios
+Vite (Next-generation frontend tooling & proxy routing)
 
-### Backend
+Axios (HTTP client with custom error-handling interceptors)
 
-* Java
-* Spring Boot
-* Spring MVC
-* Spring Data JPA
-* Hibernate
-* REST APIs
+Recharts & Modern CSS (Data visualization and responsive layout design)
 
-### Database
+## Backend
+Java & Spring Boot (Core business logic and enterprise REST APIs)
 
-* MySQL
+Spring Data JPA & Hibernate (Object-Relational Mapping & data management)
 
-### Tools
+Spring Security 6 (Stateless filter-chain and CORS configuration)
 
-* IntelliJ IDEA
-* VS Code
-* Git & GitHub
-* Maven
-* Postman
+## Database & Tools
+MySQL (Relational database management)
 
+Git & GitHub (Version control and source management)
 
+Maven (Dependency management and build automation)
+
+IntelliJ IDEA & VS Code (Development environments)
 
 ## 🔌 Backend API Endpoints
 
