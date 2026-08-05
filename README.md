@@ -1,6 +1,27 @@
 # 💰 AI-Powered Expense Tracker
 
-# 💳 Full-Stack Expense Tracker & Analytics Dashboard
+<p align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/devashri684/AI-Expense-Tracker?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/devashri684/AI-Expense-Tracker?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/devashri684/AI-Expense-Tracker?style=for-the-badge)
+![GitHub license](https://img.shields.io/github/license/devashri684/AI-Expense-Tracker?style=for-the-badge)
+
+</p>
+
+<p align="center">
+
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge\&logo=java)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-Framework-brightgreen?style=for-the-badge\&logo=springboot)
+![React](https://img.shields.io/badge/React-JS-blue?style=for-the-badge\&logo=react)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge\&logo=mysql)
+![Vite](https://img.shields.io/badge/Vite-BuildTool-purple?style=for-the-badge\&logo=vite)
+
+</p>
+
+---
+
+## 💳 Full-Stack Expense Tracker & Analytics Dashboard
 
 A robust, production-grade full-stack personal finance and expense management platform designed to track daily transactions, calculate financial metrics, and visualize spending patterns through interactive analytics dashboards.
 
@@ -8,11 +29,11 @@ A robust, production-grade full-stack personal finance and expense management pl
 
 ## 🚀 Key Features
 
-* **Complete CRUD Operations:** Seamlessly add, update, delete, and fetch expense records in real time.
-* **Category Tracking:** Organize expenses dynamically across various spending categories.
-* **Financial Summaries & Metrics:** Automatically computes total balances, income, expenses, and net savings.
-* **Data Visualization:** Interactive charts and breakdown views powered by React and Recharts.
-* **RESTful Architecture:** Built on a decoupled client-server model using secure, stateless backend APIs.
+* ✅ **Complete CRUD Operations:** Seamlessly add, update, delete, and fetch expense records in real time
+* 📊 **Category Tracking:** Organize expenses dynamically across various spending categories
+* 💹 **Financial Summaries & Metrics:** Automatically computes total balance, income, expenses, and net savings
+* 📈 **Data Visualization:** Interactive charts and breakdown views powered by React and Recharts
+* 🔗 **RESTful Architecture:** Decoupled client-server model using secure, stateless backend APIs
 
 ---
 
@@ -29,37 +50,35 @@ Expense-Tracker
 │
 └── MySQL Database
     └── Relational data persistence
+```
+
+---
 
 ## 🛠️ Tech Stack
 
-## Frontend
-React.js (Component-based UI architecture)
+### 🌐 Frontend
 
-Vite (Next-generation frontend tooling & proxy routing)
+* React.js
+* Vite
+* Axios
+* Recharts & CSS
 
-Axios (HTTP client with custom error-handling interceptors)
+### ⚙️ Backend
 
-Recharts & Modern CSS (Data visualization and responsive layout design)
+* Java & Spring Boot
+* Spring Data JPA & Hibernate
+* Spring Security
 
-## Backend
-Java & Spring Boot (Core business logic and enterprise REST APIs)
+### 🗄️ Database & Tools
 
-Spring Data JPA & Hibernate (Object-Relational Mapping & data management)
+* MySQL
+* Git & GitHub
+* Maven
+* IntelliJ IDEA & VS Code
 
-Spring Security 6 (Stateless filter-chain and CORS configuration)
-
-## Database & Tools
-MySQL (Relational database management)
-
-Git & GitHub (Version control and source management)
-
-Maven (Dependency management and build automation)
-
-IntelliJ IDEA & VS Code (Development environments)
+---
 
 ## 🔌 Backend API Endpoints
-
-### Expense APIs
 
 | Method | Endpoint             | Description       |
 | ------ | -------------------- | ----------------- |
@@ -73,9 +92,7 @@ IntelliJ IDEA & VS Code (Development environments)
 
 ## ⚙️ How to Run Locally
 
-### Prerequisites
-
-Install:
+### 📌 Prerequisites
 
 * Java 17+
 * Node.js
@@ -84,66 +101,34 @@ Install:
 
 ---
 
-## Backend Setup
-
-Navigate to backend:
+### 🖥️ Backend Setup
 
 ```bash
 cd backend
-```
-
-Configure MySQL database in:
-
-```
-src/main/resources/application.properties
-```
-
-Run Spring Boot application:
-
-```bash
 mvn spring-boot:run
 ```
 
-Backend will start on:
-
-```
-http://localhost:8080
-```
+Runs on: `http://localhost:8080`
 
 ---
 
-## Frontend Setup
-
-Navigate to frontend:
+### 💻 Frontend Setup
 
 ```bash
 cd frontend
-```
-
-Install dependencies:
-
-```bash
 npm install
-```
-
-Start React application:
-
-```bash
 npm run dev
 ```
 
-Frontend will start on:
+Runs on: `http://localhost:5173`
 
-```
-http://localhost:5173
-```
+---
 
 ## 👩‍💻 Author
 
 **Devashri Rewanwar**
 
-GitHub:
-https://github.com/devashri684
+🔗 https://github.com/devashri684
 
 ---
 
