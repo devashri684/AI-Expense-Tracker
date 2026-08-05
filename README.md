@@ -1,26 +1,5 @@
 # 💰 AI-Powered Expense Tracker
 
-<p align="center">
-
-![GitHub stars](https://img.shields.io/github/stars/devashri684/AI-Expense-Tracker?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/devashri684/AI-Expense-Tracker?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/devashri684/AI-Expense-Tracker?style=for-the-badge)
-![GitHub license](https://img.shields.io/github/license/devashri684/AI-Expense-Tracker?style=for-the-badge)
-
-</p>
-
-<p align="center">
-
-![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge\&logo=java)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-Framework-brightgreen?style=for-the-badge\&logo=springboot)
-![React](https://img.shields.io/badge/React-JS-blue?style=for-the-badge\&logo=react)
-![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge\&logo=mysql)
-![Vite](https://img.shields.io/badge/Vite-BuildTool-purple?style=for-the-badge\&logo=vite)
-
-</p>
-
----
-
 ## 💳 Full-Stack Expense Tracker & Analytics Dashboard
 
 A robust, production-grade full-stack personal finance and expense management platform designed to track daily transactions, calculate financial metrics, and visualize spending patterns through interactive analytics dashboards.
@@ -58,27 +37,29 @@ Expense-Tracker
 
 ### 🌐 Frontend
 
-* React.js
-* Vite
-* Axios
-* Recharts & CSS
+* React.js (Component-based UI architecture)
+* Vite (Next-generation frontend tooling & proxy routing)
+* Axios (HTTP client with custom error-handling interceptors)
+* Recharts & Modern CSS (Data visualization and responsive layout design)
 
 ### ⚙️ Backend
 
-* Java & Spring Boot
-* Spring Data JPA & Hibernate
-* Spring Security
+* Java & Spring Boot (Core business logic and REST APIs)
+* Spring Data JPA & Hibernate (ORM & database interaction)
+* Spring Security 6 (Stateless authentication & CORS configuration)
 
 ### 🗄️ Database & Tools
 
-* MySQL
-* Git & GitHub
-* Maven
-* IntelliJ IDEA & VS Code
+* MySQL (Relational database)
+* Git & GitHub (Version control)
+* Maven (Build & dependency management)
+* IntelliJ IDEA & VS Code (Development tools)
 
 ---
 
 ## 🔌 Backend API Endpoints
+
+### Expense APIs
 
 | Method | Endpoint             | Description       |
 | ------ | -------------------- | ----------------- |
@@ -94,6 +75,8 @@ Expense-Tracker
 
 ### 📌 Prerequisites
 
+Make sure you have installed:
+
 * Java 17+
 * Node.js
 * MySQL
@@ -101,26 +84,55 @@ Expense-Tracker
 
 ---
 
-### 🖥️ Backend Setup
+## 🖥️ Backend Setup
 
 ```bash
 cd backend
+```
+
+Configure MySQL database in:
+
+```
+src/main/resources/application.properties
+```
+
+Run the Spring Boot application:
+
+```bash
 mvn spring-boot:run
 ```
 
-Runs on: `http://localhost:8080`
+Backend will run on:
+
+```
+http://localhost:8080
+```
 
 ---
 
-### 💻 Frontend Setup
+## 💻 Frontend Setup
 
 ```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Runs on: `http://localhost:5173`
+Frontend will run on:
+
+```
+http://localhost:5173
+```
 
 ---
 
@@ -128,7 +140,7 @@ Runs on: `http://localhost:5173`
 
 **Devashri Rewanwar**
 
-🔗 https://github.com/devashri684
+🔗 GitHub: https://github.com/devashri684
 
 ---
 
