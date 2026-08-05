@@ -13,4 +13,5 @@ public interface ExpenseService {
     List<Expense> getExpensesByUser(Long userId);
 
     void deleteExpense(Long id);
+
 }
