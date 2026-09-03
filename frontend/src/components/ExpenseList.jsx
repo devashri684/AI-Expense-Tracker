@@ -90,7 +90,7 @@ import { Link } from 'react-router-dom'
 
 const currencyFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'INR',
 })
 
 const getTypeClassName = (type) => (type === 'INCOME' ? 'income-pill' : 'expense-pill')

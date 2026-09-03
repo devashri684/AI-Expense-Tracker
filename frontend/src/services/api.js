@@ -73,7 +73,6 @@
 // export default api
 import axios from 'axios'
 
-
 const api = axios.create({
   baseURL: '/api/expenses',
   headers: {
@@ -83,6 +82,26 @@ const api = axios.create({
   xsrfCookieName: 'XSRF-TOKEN',
   xsrfHeaderName: 'X-XSRF-TOKEN',
 })
+
+// Automatically attach Bearer token if stored in localStorage
+api.interceptors.request.use(
+  (config) => {
+    try {
+      const storedUser = localStorage.getItem('auth_user') || localStorage.getItem('user')
+      if (storedUser) {
+        const parsed = JSON.parse(storedUser)
+        const token = parsed?.token || parsed?.accessToken
+        if (token) {
+          config.headers.Authorization = `Bearer ${token}`
+        }
+      }
+    } catch (e) {
+      // ignore JSON parse errors for non-JSON tokens
+    }
+    return config
+  },
+  (error) => Promise.reject(error)
+)
 
 api.interceptors.response.use(
   (response) => response,
@@ -105,8 +124,7 @@ const normalizeExpensePayload = (expense) => ({
   amount: Number(expense.amount),
   type: expense.type || 'EXPENSE',
   user: { id: 1 },
-  // ✅ Now dynamically mapping the categoryId from the form
-  category: { id: expense.categoryId || 1 } 
+  category: { id: expense.categoryId || 1 },
 })
 
 export const getAllExpenses = async () => {
@@ -137,6 +155,15 @@ export const updateExpense = async (id, expense) => {
 
 export const getExpensesByUser = async (userId) => {
   const response = await api.get(`/user/${userId}`)
+  return extractData(response)
+}
+
+export const getAiInsights = async () => {
+  const response = await api.get('/ai/insights')
+  return extractData(response)
+}
+export const askAiAdvisor = async (message) => {
+  const response = await api.post('/ai/chat', { message })
   return extractData(response)
 }
 
