@@ -14,14 +14,14 @@ The application helps users track income and expenses, automatically extract tra
 ### 📊 Financial Dashboard
 <img width="1896" height="1076" alt="Screenshot 2026-09-07 123224" src="https://github.com/user-attachments/assets/7f3d820e-9f5f-4475-ac33-5e210f90baec" />
 
+### 💳 Transactions & Category Filtering
+<img width="1896" height="1075" alt="Screenshot 2026-09-07 123324" src="https://github.com/user-attachments/assets/02718a06-6938-4105-b873-caefedffe926" />
 
 ### 💰 Expense Management
 <img width="1896" height="1077" alt="Screenshot 2026-09-07 123506" src="https://github.com/user-attachments/assets/097b4ea5-4de5-4947-887b-aae7b45f8bdd" />
 
-
 ### 📸 AI Receipt Scanner
 <img width="1896" height="1080" alt="Screenshot 2026-09-07 123358" src="https://github.com/user-attachments/assets/d342c336-cf9b-49be-9476-0763c243f438" />
-
 
 ### 🧠 AI Financial Copilot
 <img width="1895" height="1081" alt="Screenshot 2026-09-07 123555" src="https://github.com/user-attachments/assets/64000146-9ab6-4180-8006-90b52c2441c5" />
