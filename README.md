@@ -9,28 +9,23 @@ The application helps users track income and expenses, automatically extract tra
 ## 📸 Project Screenshots
 
 ### 🔐 Login & Registration
-<img width="1917" height="1080" alt="Screenshot 2026-09-07 123032" src="https://github.com/user-attachments/assets/2f70f315-c36f-4861-a27b-481648867db4" />
-![Login Page](screenshots/login.png)
+<img width="1888" height="1071" alt="image" src="https://github.com/user-attachments/assets/d78abdce-291b-46a6-84b1-3cd8b56072bc" />
 
 ### 📊 Financial Dashboard
+<img width="1896" height="1076" alt="Screenshot 2026-09-07 123224" src="https://github.com/user-attachments/assets/7f3d820e-9f5f-4475-ac33-5e210f90baec" />
 
-![Dashboard](screenshots/dashboard.png)
 
 ### 💰 Expense Management
+<img width="1896" height="1077" alt="Screenshot 2026-09-07 123506" src="https://github.com/user-attachments/assets/097b4ea5-4de5-4947-887b-aae7b45f8bdd" />
 
-![Expense Management](screenshots/expense-management.png)
 
 ### 📸 AI Receipt Scanner
+<img width="1896" height="1080" alt="Screenshot 2026-09-07 123358" src="https://github.com/user-attachments/assets/d342c336-cf9b-49be-9476-0763c243f438" />
 
-![AI Receipt Scanner](screenshots/receipt-scanner.png)
 
 ### 🧠 AI Financial Copilot
+<img width="1895" height="1081" alt="Screenshot 2026-09-07 123555" src="https://github.com/user-attachments/assets/64000146-9ab6-4180-8006-90b52c2441c5" />
 
-![AI Financial Copilot](screenshots/financial-copilot.png)
-
----
-
-## ✨ Features
 
 ## ✨ Features
 
