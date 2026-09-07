@@ -6,26 +6,31 @@ The application helps users track income and expenses, automatically extract tra
 
 ---
 
-## 🎥 Project Demo
+## 📸 Project Screenshots
 
-> 🚧 **Project Demo Video Coming Soon**
+### 🔐 Login & Registration
+<img width="1917" height="1080" alt="Screenshot 2026-09-07 123032" src="https://github.com/user-attachments/assets/2f70f315-c36f-4861-a27b-481648867db4" />
+![Login Page](screenshots/login.png)
 
-<!-- Replace YOUR_VIDEO_ID with your YouTube video ID after uploading the demo -->
+### 📊 Financial Dashboard
 
-[![AI Expense Tracker Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+![Dashboard](screenshots/dashboard.png)
 
-The demo covers:
+### 💰 Expense Management
 
-* 🔐 User authentication
-* 📊 Financial dashboard
-* 💰 Income and expense management
-* 📸 AI-powered receipt scanning
-* 🧠 AI financial insights
-* 💬 Financial Copilot
-* 📈 Spending visualizations
-* 🔄 CRUD operations
+![Expense Management](screenshots/expense-management.png)
+
+### 📸 AI Receipt Scanner
+
+![AI Receipt Scanner](screenshots/receipt-scanner.png)
+
+### 🧠 AI Financial Copilot
+
+![AI Financial Copilot](screenshots/financial-copilot.png)
 
 ---
+
+## ✨ Features
 
 ## ✨ Features
 
