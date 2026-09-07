@@ -12,22 +12,37 @@ export default function ReceiptUploader({ onScanComplete }) {
     setLoading(true);
 
     const formData = new FormData();
+    // Appending both 'file' and 'receipt' so it matches whatever your Spring Boot @RequestParam expects
+    formData.append("file", file);
     formData.append("receipt", file);
 
     try {
-      // Points to your backend scan route
+      const token = localStorage.getItem("token") || localStorage.getItem("jwt");
+
+      const headers = {};
+      if (token) {
+        headers["Authorization"] = `Bearer ${token}`;
+      }
+
       const res = await fetch("http://localhost:8080/api/expenses/scan-receipt", {
         method: "POST",
+        headers,
         body: formData,
       });
 
-      if (!res.ok) throw new Error("Failed to scan receipt");
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("Backend scan failed:", res.status, errorText);
+        throw new Error(`Server returned status ${res.status}: ${errorText}`);
+      }
 
       const data = await res.json();
-      onScanComplete(data);
+      if (onScanComplete) {
+        onScanComplete(data);
+      }
     } catch (err) {
-      console.error(err);
-      alert("Error scanning receipt. Please enter details manually.");
+      console.error("Receipt Scan Error:", err);
+      alert(`Error scanning receipt: ${err.message || "Please enter details manually."}`);
     } finally {
       setLoading(false);
     }
@@ -35,7 +50,7 @@ export default function ReceiptUploader({ onScanComplete }) {
 
   return (
     <div className="card receipt-scanner-card">
-      <label className="scanner-dropzone">
+      <label className="scanner-dropzone" style={{ cursor: loading ? "not-allowed" : "pointer" }}>
         <input
           type="file"
           accept="image/*"
@@ -58,8 +73,13 @@ export default function ReceiptUploader({ onScanComplete }) {
       </label>
 
       {preview && (
-        <div className="scanner-preview">
-          <img src={preview} alt="Receipt preview" className="scanner-thumb" />
+        <div className="scanner-preview" style={{ marginTop: "1rem", textAlign: "center" }}>
+          <img
+            src={preview}
+            alt="Receipt preview"
+            className="scanner-thumb"
+            style={{ maxHeight: "150px", borderRadius: "8px", border: "1px solid #e2e8f0" }}
+          />
         </div>
       )}
     </div>

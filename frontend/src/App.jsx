@@ -334,23 +334,20 @@ function AppShell() {
               <span>New</span>
             </NavLink>
           </nav>
-
-          <div className="sidebar-footer">
-            {loggedIn ? (
-              <div className="profile-pill" title={userName}>
-                <span className="profile-avatar">{initials}</span>
-                <span className="profile-name">{userName}</span>
-              </div>
-            ) : (
-              <Link className="icon-button" to="/login" aria-label="Login">
-                <LoginIcon />
-              </Link>
-            )}
-          </div>
         </aside>
       )}
 
       <div className="app-content">
+        {/* Sticky top bar holding the profile badge */}
+        {!isAuthPage && loggedIn && (
+          <header className="top-navbar">
+            <div className="profile-pill" title={userName}>
+              <span className="profile-avatar">{initials}</span>
+              <span className="profile-name">{userName}</span>
+            </div>
+          </header>
+        )}
+
         <main className="app-main">
           <Routes>
             <Route path="/login" element={<LoginPage />} />

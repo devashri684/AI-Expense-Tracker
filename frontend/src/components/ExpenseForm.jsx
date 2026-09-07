@@ -298,11 +298,14 @@ const CATEGORY_MAP = {
   other: 1,    // fallback
 }
 
+const getTodayDateString = () => new Date().toISOString().split('T')[0]
+
 const initialFormState = {
   title: '',
   amount: '',
   type: 'EXPENSE',
   categoryId: 1,
+  date: getTodayDateString(),
 }
 
 const resolveInitialValues = (values = {}) => {
@@ -314,6 +317,16 @@ const resolveInitialValues = (values = {}) => {
     mappedCategoryId = CATEGORY_MAP[key] || 1
   }
 
+  // Handle date formatting if incoming from scanner or edit prop
+  let formattedDate = getTodayDateString()
+  if (values.date) {
+    if (typeof values.date === 'string') {
+      formattedDate = values.date.split('T')[0].split(' ')[0]
+    } else if (values.date instanceof Date) {
+      formattedDate = values.date.toISOString().split('T')[0]
+    }
+  }
+
   return {
     ...initialFormState,
     ...values,
@@ -321,6 +334,7 @@ const resolveInitialValues = (values = {}) => {
     amount: values.amount !== undefined && values.amount !== null ? values.amount : '',
     type: values.type ? values.type.toUpperCase() : 'EXPENSE',
     categoryId: mappedCategoryId,
+    date: formattedDate,
   }
 }
 
@@ -359,6 +373,7 @@ function ExpenseForm({
     const amount = Number(formData.amount)
     const type = formData.type === 'INCOME' ? 'INCOME' : 'EXPENSE'
     const categoryId = Number(formData.categoryId)
+    const date = formData.date || getTodayDateString()
 
     if (!title) {
       setError('Title is required')
@@ -375,6 +390,7 @@ function ExpenseForm({
       amount,
       type,
       categoryId,
+      date,
     }
 
     setSubmitting(true)
@@ -386,8 +402,8 @@ function ExpenseForm({
       console.error(err)
       setError(
         err?.response?.data?.message ||
-        err.message ||
-        'Failed to save expense'
+          err.message ||
+          'Failed to save expense'
       )
     } finally {
       setSubmitting(false)
@@ -423,6 +439,17 @@ function ExpenseForm({
             onChange={handleChange}
             placeholder="0.00"
             step="0.01"
+            required
+          />
+        </label>
+
+        <label className="field">
+          <span>Date</span>
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
             required
           />
         </label>

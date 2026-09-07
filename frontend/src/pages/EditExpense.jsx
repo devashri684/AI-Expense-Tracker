@@ -37,6 +37,15 @@ function EditExpense() {
     await updateExpense(id, updatedExpense)
     navigate('/')
   }
+  const handleUpdateExpense = async (formData) => {
+  const payload = {
+    ...formData,
+    amount: Number(formData.amount),
+    date: formData.date, // <-- Ensures edited dates are persisted
+  }
+  await updateExpense(id, payload)
+  navigate('/')
+}
 
   return (
     <section className="page-stack">
